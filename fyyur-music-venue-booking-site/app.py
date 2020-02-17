@@ -357,7 +357,7 @@ def show_artist(artist_id):
       this_start_time = venue_item.start_time
       artist_data[0]["past_shows"].append({
         "venue_id":venue_details[0].id,
-        "Venue_name":venue_details[0].name,
+        "venue_name":venue_details[0].name,
         "venue_image_link":venue_details[0].image_link,
         "start_time":this_start_time.strftime("%m/%d/%Y, %H:%M:%S")
       })
@@ -368,7 +368,7 @@ def show_artist(artist_id):
       this_start_time = venue_item.start_time
       artist_data[0]["upcoming_shows"].append({
         "venue_id":venue_details[0].id,
-        "Venue_name":venue_details[0].name,
+        "venue_name":venue_details[0].name,
         "venue_image_link":venue_details[0].image_link,
         "start_time":this_start_time.strftime("%m/%d/%Y, %H:%M:%S")
       })
