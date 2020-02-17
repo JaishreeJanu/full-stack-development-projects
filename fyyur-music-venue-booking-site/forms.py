@@ -2,7 +2,6 @@ from datetime import datetime
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField,ValidationError
 from wtforms.validators import DataRequired, AnyOf, URL
-from flask import flash
 import re
 
 state_choices=[
@@ -97,12 +96,23 @@ class ShowForm(FlaskForm):
 
 def validate_phone(form,field):
         if not re.search(r"^[0-9]{10}$", field.data):
-            flash('please enter correct phone!!')
             raise ValidationError('Invalid Phone number')
+
+def validate_state(form,field):
+    all_states = [state[1] for state in state_choices]
+    value = field.data
+    if value not in all_states:
+        raise ValidationError('Invalid state')
+
+def validate_genres(form,field):
+    all_genres = [choice[1] for choice in genre_choices]
+    for value in field.data:
+        if value not in all_genres:
+            raise ValidationError('Invalid genre')
 
 def length(form,field):
     if len(field.data)>100 or len(field.data)<10:
-        flash('Field description must be between 10 to 100!!')
+        flash('Field description must be between 10 to 100')
         raise ValidationError('Field description must be between 10 to 100')
 
 
@@ -115,7 +125,7 @@ class VenueForm(FlaskForm):
         'city', validators=[DataRequired()]
     )
     state = SelectField(
-        'state', validators=[DataRequired(),AnyOf(state_choices,message='Please select valid choices only')],
+        'state', validators=[DataRequired(),validate_state],
         choices=state_choices
     )
     address = StringField(
@@ -129,7 +139,7 @@ class VenueForm(FlaskForm):
     )
     genres = SelectMultipleField(
         # TODO implement enum restriction ****
-        'genres', validators=[DataRequired(),AnyOf(genre_choices,message='Please select valid choices only')],
+        'genres', validators=[DataRequired(),validate_genres],
         choices=genre_choices
     )
     facebook_link = StringField(
@@ -154,7 +164,7 @@ class ArtistForm(FlaskForm):
         'city', validators=[DataRequired()]
     )
     state = SelectField(
-        'state', validators=[DataRequired(),AnyOf(state_choices,message='Please select valid choices only')],
+        'state', validators=[DataRequired(),validate_state],
         choices=state_choices
     )
     phone = StringField(
@@ -166,7 +176,7 @@ class ArtistForm(FlaskForm):
     )
     genres = SelectMultipleField(
         # TODO implement enum restriction ****
-        'genres', validators=[DataRequired(),AnyOf(state_choices,message='Please select valid choices only')],
+        'genres', validators=[DataRequired(),validate_genres],
         choices=genre_choices
     )
     facebook_link = StringField(
@@ -184,3 +194,4 @@ class ArtistForm(FlaskForm):
     )
 
 # TODO IMPLEMENT NEW ARTIST FORM AND NEW SHOW FORM ****
+
