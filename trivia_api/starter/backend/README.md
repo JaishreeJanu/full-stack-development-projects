@@ -127,7 +127,8 @@ The API will return three error types when requests fail:
 #### GET /categories
 - Returns a list of categories as dictionary and a success value.
 - No query parameter and argument
-- Sample : ``` bash
+- Sample : 
+``` bash
 curl http://localhost:5000/categories
 ```
 
