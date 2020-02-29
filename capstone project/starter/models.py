@@ -6,7 +6,8 @@ from datetime import date
 
 #database_name = "bollywood"
 #database_path = "postgres://{}:{}@{}/{}".format('jaishree','','localhost:5432', database_name)
-database_path = os.environ['DATABASE_URL']
+#database_path = os.environ['DATABASE_URL']
+database_path = 'postgres://paxwvjtokrycpn:0d70426e3faaa90c7042d30305d165ac59aab21f3004ebe3a620361f583b1374@ec2-3-229-210-93.compute-1.amazonaws.com:5432/d20ktjloq6m7p0'
 
 db = SQLAlchemy()
 
@@ -19,12 +20,13 @@ def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    db.create_all()
-    db_insert_records()
+    #db.drop_all()
+    #db.create_all()
+    #db_insert_records()
 
 def db_insert_records():
-    db.drop_all()
-    db.create_all()
+    
+    #db.create_all()
 
     new_actor = Actor(name = 'Gisele Budchen', age = 40, gender = 'Female')
     new_movie = Movie(title = "Lessons",release_date = date.today())

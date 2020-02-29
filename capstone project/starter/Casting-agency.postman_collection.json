@@ -1,0 +1,210 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Casting-agency",
+		"_postman_id": "1defd3bc-37c1-1732-0fa1-da639f96532c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/movies?page=1",
+			"request": {
+				"url": {
+					"raw": "https://final-capstone-udacity.herokuapp.com/movies?page=1",
+					"protocol": "https",
+					"host": [
+						"final-capstone-udacity",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2U5ODc3NzgwZWIxNmI0OTA0ODk4IiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODUyOTcsImV4cCI6MTU4Mjk5MjQ5NywiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.bktiSO5opejZWJCzUkguN1L4f1DGm1K_vUm4u0YY0ThQeD-vH_5VtWUd8v3eLBIAlw1ws5I8-c-Uwgh5L8AqMUlY_pNlV_l6Ds_R06aqUmd6VVzt44gxVKGGN1uuTXd92wJ5DruruLNKpcojfNU2Vk1AVZxdGUd4AGrGLwRAYJCjQdFQs1nFYg72jSha-dnvxiLWW011leQGt9hmJy_0DZ-DDmKiK3fjjYIQfn2uthnRB58jt912abGIjMksxsNbCzT9ZsADA8QyjIwxKRrIUMxK_BuZ3p8fCyZFVrCW3UAJhcLRIPHKlHqSnu1vRr8tLHZL-j4dXtcK07yu_eUL1w",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"title\": \"Piku\",\n   \"release_date\": \"Mon, 17 Feb 2020 00:00:00 GMT\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/actors?page=1",
+			"request": {
+				"url": {
+					"raw": "https://final-capstone-udacity.herokuapp.com/actors?page=1",
+					"protocol": "https",
+					"host": [
+						"final-capstone-udacity",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2U5ODc3NzgwZWIxNmI0OTA0ODk4IiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODUyOTcsImV4cCI6MTU4Mjk5MjQ5NywiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.bktiSO5opejZWJCzUkguN1L4f1DGm1K_vUm4u0YY0ThQeD-vH_5VtWUd8v3eLBIAlw1ws5I8-c-Uwgh5L8AqMUlY_pNlV_l6Ds_R06aqUmd6VVzt44gxVKGGN1uuTXd92wJ5DruruLNKpcojfNU2Vk1AVZxdGUd4AGrGLwRAYJCjQdFQs1nFYg72jSha-dnvxiLWW011leQGt9hmJy_0DZ-DDmKiK3fjjYIQfn2uthnRB58jt912abGIjMksxsNbCzT9ZsADA8QyjIwxKRrIUMxK_BuZ3p8fCyZFVrCW3UAJhcLRIPHKlHqSnu1vRr8tLHZL-j4dXtcK07yu_eUL1w",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/actors",
+			"request": {
+				"url": "https://final-capstone-udacity.herokuapp.com/actors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2U5ODc3NzgwZWIxNmI0OTA0ODk4IiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODUyOTcsImV4cCI6MTU4Mjk5MjQ5NywiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.bktiSO5opejZWJCzUkguN1L4f1DGm1K_vUm4u0YY0ThQeD-vH_5VtWUd8v3eLBIAlw1ws5I8-c-Uwgh5L8AqMUlY_pNlV_l6Ds_R06aqUmd6VVzt44gxVKGGN1uuTXd92wJ5DruruLNKpcojfNU2Vk1AVZxdGUd4AGrGLwRAYJCjQdFQs1nFYg72jSha-dnvxiLWW011leQGt9hmJy_0DZ-DDmKiK3fjjYIQfn2uthnRB58jt912abGIjMksxsNbCzT9ZsADA8QyjIwxKRrIUMxK_BuZ3p8fCyZFVrCW3UAJhcLRIPHKlHqSnu1vRr8tLHZL-j4dXtcK07yu_eUL1w",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Anny Hathway\",\n\t\"age\":32,\n\t\"gender\": \"Female\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/movies",
+			"request": {
+				"url": "https://final-capstone-udacity.herokuapp.com/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2ViODgyZDcyNTMxNmIxOTZhMGRkIiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODc1MjAsImV4cCI6MTU4Mjk5NDcyMCwiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImFkZDphY3RvciIsImFkZDptb3ZpZSIsImRlbGV0ZTphY3RvciIsImRlbGV0ZTptb3ZpZSIsIm1vZGlmeTphY3RvciIsIm1vZGlmeTptb3ZpZSIsInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.dngw5DGmN4AZekfVbgw8xXQ_7l4RQn0YkvH77FWc4tc9WDSOKmWqqUMzqyrkN3wTAlxTHlne-0_3plh5r1Kpwy_zSRbkQcbM_3jBXN3fhZljC93vxpbowoE_XxpsK6kJIbbtiJH3odVPzL4__qyA2CEDqIwPpI_IDGQ1LwNDVIAYhYQfK9bgzjo9HEneGYZ8domHRLE9SBTlxWBvRKtaK4DAA1zkxvAq4to8aOpGJE0DTfto8ScXWCd0YsnIdFnB-HeNWXCfQgw3aKv_UZkDgibZr7GAfL3s_xLfVmco-HEGoqABPGuOHqmHdumtJny0BsviaRAvS2f5Eq3qSHbpAQ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Safe heaven\",\n\t\"release_date\": \"Fri, 24 Apr 2021 00:00:00 GMT\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/actors/3",
+			"request": {
+				"url": "https://final-capstone-udacity.herokuapp.com/actors/3",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2U5ODc3NzgwZWIxNmI0OTA0ODk4IiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODUyOTcsImV4cCI6MTU4Mjk5MjQ5NywiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.bktiSO5opejZWJCzUkguN1L4f1DGm1K_vUm4u0YY0ThQeD-vH_5VtWUd8v3eLBIAlw1ws5I8-c-Uwgh5L8AqMUlY_pNlV_l6Ds_R06aqUmd6VVzt44gxVKGGN1uuTXd92wJ5DruruLNKpcojfNU2Vk1AVZxdGUd4AGrGLwRAYJCjQdFQs1nFYg72jSha-dnvxiLWW011leQGt9hmJy_0DZ-DDmKiK3fjjYIQfn2uthnRB58jt912abGIjMksxsNbCzT9ZsADA8QyjIwxKRrIUMxK_BuZ3p8fCyZFVrCW3UAJhcLRIPHKlHqSnu1vRr8tLHZL-j4dXtcK07yu_eUL1w",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Ranveer singh\",\n\t\"gender\":\"Male\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/movies/1",
+			"request": {
+				"url": "https://final-capstone-udacity.herokuapp.com/movies/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2ViODgyZDcyNTMxNmIxOTZhMGRkIiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODc1MjAsImV4cCI6MTU4Mjk5NDcyMCwiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImFkZDphY3RvciIsImFkZDptb3ZpZSIsImRlbGV0ZTphY3RvciIsImRlbGV0ZTptb3ZpZSIsIm1vZGlmeTphY3RvciIsIm1vZGlmeTptb3ZpZSIsInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.dngw5DGmN4AZekfVbgw8xXQ_7l4RQn0YkvH77FWc4tc9WDSOKmWqqUMzqyrkN3wTAlxTHlne-0_3plh5r1Kpwy_zSRbkQcbM_3jBXN3fhZljC93vxpbowoE_XxpsK6kJIbbtiJH3odVPzL4__qyA2CEDqIwPpI_IDGQ1LwNDVIAYhYQfK9bgzjo9HEneGYZ8domHRLE9SBTlxWBvRKtaK4DAA1zkxvAq4to8aOpGJE0DTfto8ScXWCd0YsnIdFnB-HeNWXCfQgw3aKv_UZkDgibZr7GAfL3s_xLfVmco-HEGoqABPGuOHqmHdumtJny0BsviaRAvS2f5Eq3qSHbpAQ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Draupadi\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://final-capstone-udacity.herokuapp.com/movies/1",
+			"request": {
+				"url": "https://final-capstone-udacity.herokuapp.com/movies/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5VUXpRekpGUlVGR1F6QTJNekpGTVRVM01EWkVOalkwUlRGQk5qSTRORGd6TWtOR05UVkZOQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgtZnNuZC5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU1N2ViODgyZDcyNTMxNmIxOTZhMGRkIiwiYXVkIjoiY2FzdGluZ3MiLCJpYXQiOjE1ODI5ODc1MjAsImV4cCI6MTU4Mjk5NDcyMCwiYXpwIjoibEN4UjNFdG12TTBIdHJ0TUJYZmxsYXpSTmgxVjFiMEkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImFkZDphY3RvciIsImFkZDptb3ZpZSIsImRlbGV0ZTphY3RvciIsImRlbGV0ZTptb3ZpZSIsIm1vZGlmeTphY3RvciIsIm1vZGlmeTptb3ZpZSIsInJlYWQ6YWN0b3JzIiwicmVhZDptb3ZpZXMiXX0.dngw5DGmN4AZekfVbgw8xXQ_7l4RQn0YkvH77FWc4tc9WDSOKmWqqUMzqyrkN3wTAlxTHlne-0_3plh5r1Kpwy_zSRbkQcbM_3jBXN3fhZljC93vxpbowoE_XxpsK6kJIbbtiJH3odVPzL4__qyA2CEDqIwPpI_IDGQ1LwNDVIAYhYQfK9bgzjo9HEneGYZ8domHRLE9SBTlxWBvRKtaK4DAA1zkxvAq4to8aOpGJE0DTfto8ScXWCd0YsnIdFnB-HeNWXCfQgw3aKv_UZkDgibZr7GAfL3s_xLfVmco-HEGoqABPGuOHqmHdumtJny0BsviaRAvS2f5Eq3qSHbpAQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
