@@ -85,6 +85,6 @@ Development setup, documentation and source code of this application can be seen
 ![Nanodegree certificate](Jaishree-Nanodegree-certificate.jpg)
 
 
-The certificate for udacity nanodegree program can be seen here: [certificate link](confirm.udacity.com/TR47RENA)
+The certificate for udacity nanodegree program can be seen here: [certificate link](https://confirm.udacity.com/TR47RENA)
 
 
