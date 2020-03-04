@@ -37,7 +37,7 @@ def get_token_auth_header():
         raise AuthError(
             {
                 "code": "invalid_header",
-                "description": 'Authorization header must start with "Bearer".'
+                "description": 'Authorization header must start with "Bearer".',
             },
             401,
         )
@@ -72,8 +72,7 @@ def check_permissions(permission, payload):
 
     if permission not in payload["permissions"]:
         raise AuthError(
-            {"code": "unauthorized", "description": "Permission not found."},
-            403
+            {"code": "unauthorized", "description": "Permission not found."}, 403
         )
     return True
 
@@ -89,12 +88,8 @@ def verify_decode_jwt(token):
     # Check if Key id is in unverified header
     if "kid" not in unverified_header:
         raise AuthError(
-            {
-                "code": "invalid_header",
-                "description": "Authorization malformed."
-            },
-            401
-            )
+            {"code": "invalid_header", "description": "Authorization malformed."}, 401
+        )
 
     rsa_key = {}  # initialize empty private rsa key as dict
     for key in jwks["keys"]:
@@ -153,7 +148,7 @@ def verify_decode_jwt(token):
 
 
 def requires_auth(permission=""):
-    """ Authentification Wrapper to decorate Endpoints with
+    """ Authentification Wrapper to decorate Endpoints
     """
 
     def requires_auth_decorator(f):
@@ -164,10 +159,7 @@ def requires_auth(permission=""):
                 payload = verify_decode_jwt(token)
             except:
                 raise AuthError(
-                    {
-                        "code": "unauthorized",
-                        "description": "Permissions not found"
-                    },
+                    {"code": "unauthorized", "description": "Permissions not found"},
                     401,
                 )
             check_permissions(permission, payload)

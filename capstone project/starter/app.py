@@ -9,6 +9,15 @@ QUESTIONS_PER_PAGE = 10
 
 
 def paginate(request, results):
+    """return results in group of 10
+    10 set of questions shown on each page
+    Arguments:
+        request {json} -- json body woth page parameter
+        results {list} -- results
+    
+    Returns:
+        list -- questions on current page
+    """
     page = request.args.get("page", 1, type=int)
     start = (page - 1) * QUESTIONS_PER_PAGE
     end = start + QUESTIONS_PER_PAGE
@@ -23,7 +32,6 @@ def create_app(test_config=None):
     app = Flask(__name__)
     setup_db(app)
     CORS(app)
-    # db_insert_records()
 
     @app.after_request
     def after_request(response):
@@ -38,8 +46,10 @@ def create_app(test_config=None):
     @app.route("/actors", methods=["GET"])
     @requires_auth("read:actors")
     def get_actors(token):
-        """
-        returns all actors if user has 'read:actors' permission
+        """gets all actors
+        if token has 'read:actors' permission
+        Returns:
+            json -- success value and list of actors
         """
         all_actors = Actor.query.all()
         actors = paginate(request, all_actors)
@@ -52,8 +62,10 @@ def create_app(test_config=None):
     @app.route("/movies", methods=["GET"])
     @requires_auth("read:movies")
     def get_movies(token):
-        """
-        return all movies if user has 'read:movies' permission
+        """get all movies
+        if token has 'read:movies' permission
+        Returns:
+            json -- success value and list of movies
         """
         all_movies = Movie.query.all()
         movies = paginate(request, all_movies)
@@ -66,8 +78,10 @@ def create_app(test_config=None):
     @app.route("/actors", methods=["POST"])
     @requires_auth("add:actor")
     def add_actor(token):
-        """
-        Adds new actor to the database table if user has 'add:actor' permission
+        """Adds a new record in actor db table
+        if token has 'add:actor' permission
+        Returns:
+            json -- success value and id of new record
         """
         data = request.get_json()
         if not data.get("name"):
@@ -84,8 +98,10 @@ def create_app(test_config=None):
     @app.route("/movies", methods=["POST"])
     @requires_auth("add:movie")
     def add_movie(token):
-        """
-        Adds new movie to the database table if user has 'add:movie' permission
+        """Adds a new record in movie db table
+        if token contains 'add:movie' permission
+        Returns:
+            json -- success value and id of new record
         """
         data = request.get_json()
         if not data:
@@ -102,8 +118,12 @@ def create_app(test_config=None):
     @app.route("/actors/<int:actor_id>", methods=["PATCH"])
     @requires_auth("modify:actor")
     def modify_actor(token, actor_id):
-        """
-        modifies the actor details if user has 'modify:actor' permission
+        """modifies the actor details with the actor_id,
+        token must contain 'modify:actor' permission
+        Arguments:
+            actor_id {int}: actor id
+        Returns:
+            json -- success value and id of updated record
         """
         data = request.get_json()
         if not data:
@@ -129,8 +149,12 @@ def create_app(test_config=None):
     @app.route("/movies/<int:movie_id>", methods=["PATCH"])
     @requires_auth("modify:movie")
     def modify_movie(token, movie_id):
-        """
-        modifies the movie details if user has 'modify:movie' permission
+        """modifies the movie details with the movie_id,
+        token must contain 'modify:movie' permission
+        Arguments:
+            movie_id {int}: movie id
+        Returns:
+            json -- success value and id of updated record
         """
         data = request.get_json()
         if not data:
@@ -153,8 +177,12 @@ def create_app(test_config=None):
     @app.route("/actors/<int:actor_id>", methods=["DELETE"])
     @requires_auth("delete:actor")
     def delete_actor(token, actor_id):
-        """
-        deletes actor with actor_id if user has 'delete:actor' permission
+        """deletes actor with actor_id,
+        should contain 'delete:actor' permission
+        Arguments:
+            actor_id {int}: actor id
+        Returns:
+            json -- success value and id of deleted record
         """
         actor = Actor.query.get(actor_id)
         if not actor:
@@ -166,8 +194,12 @@ def create_app(test_config=None):
     @app.route("/movies/<int:movie_id>", methods=["DELETE"])
     @requires_auth("delete:movie")
     def delete_movie(token, movie_id):
-        """
-        deletes movie with movie_id if user has 'delete:movie' permission
+        """deletes movie with movie_id,
+        should contain 'delete:movie' permission
+        Arguments:
+            movie_id {int}: movie id
+        Returns:
+            json -- success value and id of deleted record
         """
         movie = Movie.query.get(movie_id)
         if not movie:
@@ -206,10 +238,10 @@ def create_app(test_config=None):
     def unprocessable(error):
         return (
             jsonify(
-              {
-                "success": False, "error": 422,
-                "message": "unprocessable"
-              }),
+                {
+                    "success": False, "error": 422, "message": "unprocessable"
+                }
+            ),
             422,
         )
 

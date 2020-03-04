@@ -8,11 +8,15 @@ from config import bearer_tokens
 from sqlalchemy import desc
 from datetime import date
 
-assistant_auth = {"Authorization": bearer_tokens["casting_assistant"]}
-
-director_auth_header = {"Authorization": bearer_tokens["casting_director"]}
-
-producer_auth_header = {"Authorization": bearer_tokens["executive_producer"]}
+assistant_auth =   {
+                    "Authorization": bearer_tokens["casting_assistant"]
+                    }
+director_auth_header =  {
+                            "Authorization": bearer_tokens["casting_director"]
+                        }
+producer_auth_header = {
+                            "Authorization": bearer_tokens["executive_producer"]
+                        }
 
 new_actor = {"name": "ryan gosling", "age": 35, "gender": "Male"}
 new_movie = {"title": "Lagaan", "release_date": date.today()}
@@ -23,9 +27,6 @@ class CastingTestCase(unittest.TestCase):
 
         self.app = create_app()
         self.client = self.app.test_client
-        # database_name = "bollywood-test"
-        # database_path = "postgres://{}:{}@{}/{}".format('jaishree',\
-        # 'dabli123','localhost:5432', database_name)
         database_path = os.environ["DATABASE_URL"]
         setup_db(self.app, database_path)
         # binds the app to the current context
@@ -33,7 +34,6 @@ class CastingTestCase(unittest.TestCase):
         with self.app.app_context():
             self.db = SQLAlchemy()
             self.db.init_app(self.app)
-            # create all tables
             self.db.create_all()
 
     def tearDown(self):
@@ -125,11 +125,9 @@ class CastingTestCase(unittest.TestCase):
         self.assertEqual(data["message"], "there is no json body")
 
     def test_modify_actors_403(self):
-        # update an actor , sending assistant header
+        # update an actor ,sending assistant header(doesn't contain required permissions)
         this_actor = {"name": "Priyanka Chopra"}
-        res = self.client().patch(
-            "/actors/1", json=this_actor, headers=assistant_auth
-        )
+        res = self.client().patch("/actors/1", json=this_actor, headers=assistant_auth)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 403)
@@ -248,9 +246,7 @@ class CastingTestCase(unittest.TestCase):
     def test_modify_movies_403(self):
         # update an movie , sending assistant header
         this_movie = {"title": "mahabharta"}
-        res = self.client().patch(
-            "/movies/1", json=this_movie, headers=assistant_auth
-        )
+        res = self.client().patch("/movies/1", json=this_movie, headers=assistant_auth)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 403)
