@@ -36,6 +36,7 @@ During the coursework, following projects were developed.
 - Demonstrate the ability to construct a well-organized code base.
 - Following api endpoints should work : list venues, list artists, show venue details, show artist details, post a new venue,
 post a new artist(cannot submit invalid form submission), create a show, list all upcoming shows, list all past shows, search venues, search artists.
+- **Frontend**: ** HTML, CSS, Bootstrap **
 
 Installation, development setup, documentation and source code can seen here: [project link](https://github.com/JaishreeJanu/Udacity-full-stack-developer-program/tree/master/fyyur-music-venue-booking-site)
 
@@ -46,7 +47,7 @@ Installation, development setup, documentation and source code can seen here: [p
 - Utilize multiple HTTP request methods.
 - Handle common errors.
 - Use unittest to test flask application for expected behaviour and validate API endpoints
-
+- **Frontend**: ** Reactjs **
 Development setup, API documentation and code can seen here: [project link](https://github.com/JaishreeJanu/Udacity-full-stack-developer-program/tree/master/trivia_api/starter)
 
 3. **Coffee shop app**
@@ -56,6 +57,7 @@ Development setup, API documentation and code can seen here: [project link](http
 - Understanding third-party authentication system
 - Understanding JWTs and Role based Authentication
 - The code adheres to [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and follows common best practices.
+- **Frontend**: ** HTML, CSS, Bootstrap **
 
 Development setup, API documentation and code can seen here: [project link](https://github.com/JaishreeJanu/Udacity-full-stack-developer-program/tree/master/coffee_shop/starter_code)
 
