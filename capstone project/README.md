@@ -32,15 +32,15 @@ database_path = "postgres://{}:{}@{}/{}".format(<user-name>,'<password>','localh
 ```
 
 6. Setup Auth0:
- > create an account on auth0
- > Create an application  <casting-agency>
- > Create an API <castings>
- > Define permissions in API. Following permissions defined :
+ - create an account on auth0
+ - Create an application  <casting-agency>
+ - Create an API <castings>
+ - Define permissions in API. Following permissions defined :
  ``` 
  read:actors, read:movies, add:actor, add:movie, modify:actor, modify:movie, delete:actor, delete:movie
  ```
- > Define role: Casting assistant, casting director and casting producer 
- > Give permissions to the roles
+ - Define role: Casting assistant, casting director and casting producer 
+ - Give permissions to the roles
 
 7. ```export FLASK_APP=app.py
 	export FLASK_ENV=development```
