@@ -4,7 +4,7 @@
 The motivation behind creating this project is to apply the skills learnt during Full stack Nanodegree program.
 Following topics, libraries and skills learnt as part of this program:
 1. SQL and database modeling for the web ```(SQL, flask-sqlalchemy, flask-migrate)```
-2. API development and documentation ```(flask, unittest)```
+2. API development,testing endpoints and documentation ```(flask, unittest)```
 3. Identity and access management ```(Auth0)```
 4. Server deployment, Containerization and testing ```(docker and kubernetes)```
 
