@@ -1,7 +1,6 @@
-Casting Agency
+## Casting Agency
 
-## Motivation
-.
+
 Following topics, libraries and skills :
 1. SQL and database modeling for the web ```(SQL, flask-sqlalchemy, flask-migrate)```
 2. API development,testing endpoints and documentation ```(flask, unittest)```
