@@ -69,7 +69,6 @@ Source code for this projects can be seen here: [project link](https://github.co
 
 5. **Capstone project: Casting Agency**
 
-- This is the final project of this course which tests all the skills learnt till now.
 - Architect relational database models in python.
 - Utilize SQLAlchemy to conduct database queries
 - Follow RESTful principles of API development.
