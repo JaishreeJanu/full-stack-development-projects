@@ -1,8 +1,8 @@
-# Capstone Project of FSND: Casting Agency
+Casting Agency
 
 ## Motivation
-The motivation behind creating this project is to apply the skills learnt during Full stack Nanodegree program.
-Following topics, libraries and skills learnt as part of this program:
+.
+Following topics, libraries and skills :
 1. SQL and database modeling for the web ```(SQL, flask-sqlalchemy, flask-migrate)```
 2. API development,testing endpoints and documentation ```(flask, unittest)```
 3. Identity and access management ```(Auth0)```
