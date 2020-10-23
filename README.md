@@ -1,6 +1,6 @@
-# Full-Stack Developer Nanodegree Program
+# Full-Stack Development projects
 
-The motivation behind taking this course is to learn following skills and topics:
+Skills and topics:
 1. SQL and Data Modeling for the web
 2. API Development and Documentation
 3. Identity and Access Management
@@ -8,9 +8,6 @@ The motivation behind taking this course is to learn following skills and topics
 
 All the above mentioned skills are helpful in developing a full-fledged web application.
 
-## Details of the course
-
-This course takes you through the web development in the world of python. I learnt libraries and languages required for web development in python.
 As a result, I have acquired huge amount of knowledge in following areas:
 
 - Databases: **Postgresql**, **SQLAlchemy ORM**
@@ -26,7 +23,7 @@ As a result, I have acquired huge amount of knowledge in following areas:
 
 ## Project details
 
-During the coursework, following projects were developed.
+The projects in this repository
 
 1. **Fyyur: Artist Booking Site**
 
@@ -82,11 +79,5 @@ Source code for this projects can be seen here: [project link](https://github.co
 - The application has been documented well. The code adheres to PEP 8 style guide.
 
 Development setup, documentation and source code of this application can be seen here: [project link](https://github.com/JaishreeJanu/Udacity-full-stack-developer-program/tree/master/capstone%20project)
-
-
-![Nanodegree certificate](Jaishree-Nanodegree-certificate.jpg)
-
-
-The certificate for udacity nanodegree program can be seen here: [certificate link](https://confirm.udacity.com/TR47RENA)
 
 
